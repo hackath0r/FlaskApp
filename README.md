@@ -1,2 +1,2 @@
 # FlaskApp
-Template Flask App to get started
+Boilerplate Flask App to quickly get started
