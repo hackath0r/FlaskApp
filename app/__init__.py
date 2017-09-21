@@ -18,6 +18,10 @@ db = SQLAlchemy(app)
 def not_found(erro):
     return render_template('404.html'), 404
 
+@app.route('/')
+def index():
+    return  render_template('index.html')
+
 # Build the database:
 # This will create the database file using SQLAlchemy
 db.create_all()
