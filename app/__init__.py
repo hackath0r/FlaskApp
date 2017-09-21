@@ -10,8 +10,12 @@ app = Flask(__name__)
 # Configurations
 app.config.from_object('config')
 
-# Define the database object 
-db = SQLAlchemy(app)
+# Import db module from mod_db
+from app.mod_db.models import db
+
+# Connect SQLAlchemy object to application
+db.init_app(app)
+db.app = app
 
 # Handle HTTP error
 @app.errorhandler(404)
